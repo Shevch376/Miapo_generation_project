@@ -3,11 +3,9 @@ import string
 
 class Password:
     def __init__(self, value):
-        self.value = value
+        self.password = value
+        self.length = len(value)
         self.created_at = "now"
-
-import random
-import string
 
 def generate_password(length=8):
     chars = string.ascii_letters + string.digits
