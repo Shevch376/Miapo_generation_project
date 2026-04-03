@@ -3,7 +3,8 @@ import string
 
 class Password:
     def __init__(self, value):
-        self.value = value
+        self.password = value
+        self.length = len(value)
 
 import random
 import string
