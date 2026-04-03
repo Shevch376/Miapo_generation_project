@@ -14,6 +14,9 @@ def generate_password(length=8):
 def delete_password(index):
     passwords.pop(index)
 
+def get_password(index):
+    return passwords[index]
+
 passwords = []
 
 def save_password(pwd):
