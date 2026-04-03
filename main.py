@@ -23,13 +23,26 @@ def save_password(pwd):
 passwords = []
 
 if __name__ == "__main__":
-    pwd = generate_password()
-    print("Сгенерирован:", pwd)
+    while True:
+        print("\n1. Сгенерировать пароль")
+        print("2. Показать все пароли")
+        print("3. Удалить пароль")
+        print("4. Выход")
 
-    save_password(pwd)
-    print("Сохранено:", passwords)
+        choice = input("Выбор: ")
 
-    print("Получение:", get_password(0))
+        if choice == "1":
+            pwd = generate_password()
+            save_password(pwd)
+            print("Сгенерирован и сохранён:", pwd)
 
-    delete_password(0)
-    print("После удаления:", passwords)
+        elif choice == "2":
+            for i, p in enumerate(passwords):
+                print(i, p.password)
+
+        elif choice == "3":
+            index = int(input("Введите индекс: "))
+            delete_password(index)
+
+        elif choice == "4":
+            break
