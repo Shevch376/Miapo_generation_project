@@ -16,6 +16,11 @@ def delete_password(index):
 
 def get_password(index):
     return passwords[index]
+<<<<<<< HEAD
+=======
+
+passwords = []
+>>>>>>> feature/get
 
 def save_password(pwd):
     passwords.append(Password(pwd))
