@@ -4,6 +4,7 @@ import string
 class Password:
     def __init__(self, value):
         self.value = value
+        self.created_at = "now"
 
 import random
 import string
@@ -14,3 +15,6 @@ def generate_password(length=8):
 
 
 passwords = []
+
+def save_password(pwd):
+    passwords.append(Password(pwd))
