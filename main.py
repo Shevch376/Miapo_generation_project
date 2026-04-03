@@ -11,8 +11,25 @@ def generate_password(length=8):
     chars = string.ascii_letters + string.digits
     return ''.join(random.choice(chars) for _ in range(length))
 
+def delete_password(index):
+    passwords.pop(index)
 
-passwords = []
+def get_password(index):
+    return passwords[index]
 
 def save_password(pwd):
     passwords.append(Password(pwd))
+
+passwords = []
+
+if __name__ == "__main__":
+    pwd = generate_password()
+    print("Сгенерирован:", pwd)
+
+    save_password(pwd)
+    print("Сохранено:", passwords)
+
+    print("Получение:", get_password(0))
+
+    delete_password(0)
+    print("После удаления:", passwords)
